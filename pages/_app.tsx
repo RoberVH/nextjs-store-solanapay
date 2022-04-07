@@ -1,3 +1,4 @@
+
 import '../styles/globals.css'
 import type { AppProps } from 'next/app'
 import Layout from '../components/Layout'
@@ -17,7 +18,7 @@ function MyApp({ Component, pageProps }: AppProps) {
 
   // You can also provide a custom RPC endpoint.
   const endpoint = clusterApiUrl(network);
-  console.log('network:', network, 'endpoint:', endpoint);
+  console.log('network: ', network, 'endpoint:', endpoint);
 
   // @solana/wallet-adapter-wallets includes all the adapters but supports tree shaking and lazy loading --
   // Only the wallets you configure here will be compiled into your application, and only the dependencies
