@@ -8,3 +8,8 @@ input[type='number']::-webkit-outer-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
+
+body {
+  background: rgb(196,199,240);
+  background: linear-gradient(90deg, rgba(196,199,240,0.1516981792717087) 15%, rgba(128,155,200,1) 100%);
+}

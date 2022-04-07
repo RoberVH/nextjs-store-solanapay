@@ -9,6 +9,7 @@ interface Props {
 
 export default function Products({ submitTarget, enabled }: Props) {
   const formRef = useRef<HTMLFormElement>(null);
+  
 
   return (
     <form method='get' action={submitTarget} ref={formRef}>
@@ -20,7 +21,7 @@ export default function Products({ submitTarget, enabled }: Props) {
                 <h3 className="text-2xl font-bold">{product.name}</h3>
                 <p className="text-sm text-gray-800">{product.description}</p>
                 <p className="my-4">
-                  <span className="mt-4 text-xl font-bold">{product.priceSol} SOL</span>
+                  <span className="mt-4 text-xl font-bold">${product.priceUsd} SOL</span>
                   {product.unitName && <span className="text-sm text-gray-800"> /{product.unitName}</span>}
                 </p>
                 <div className="mt-1">
@@ -33,7 +34,7 @@ export default function Products({ submitTarget, enabled }: Props) {
         </div>
 
         <button
-          className="items-center px-20 rounded-md py-2 max-w-fit self-center bg-gray-900 text-white hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed"
+          className="items-center px-20 rounded-md py-2 max-w-fit self-center bg-red-600 text-white hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed"
           disabled={!enabled}
         >
           Checkout
